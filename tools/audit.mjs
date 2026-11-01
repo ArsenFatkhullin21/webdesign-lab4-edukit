@@ -22,7 +22,12 @@ for (const theme of ['light', 'dark']) {
     await page.waitForSelector('#storybook-root > *, body.sb-show-errordisplay', { timeout: 8000 }).catch(() => errors.push(`${s.id}: ничего не отрисовано`));
     if (await page.$('body.sb-show-errordisplay')) errors.push(`${s.id}: ошибка Storybook: ${await page.$eval('#error-message', (e) => e.textContent).catch(() => '')}`);
     await page.evaluate(axeSrc);
-    const res = await page.evaluate(() => axe.run('#storybook-root', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] }));
+    // аддон a11y запускает собственный axe при отрисовке истории — ждём, пока он закончит
+    let res;
+    for (let attempt = 0; ; attempt++) {
+      try { res = await page.evaluate(() => axe.run('#storybook-root', { runOnly: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'] })); break; }
+      catch (e) { if (!/already running/.test(e.message) || attempt > 40) throw e; await new Promise((r) => setTimeout(r, 250)); }
+    }
     for (const v of res.violations) {
       violations++;
       console.log(`[${theme}] ${s.id}: ${v.id} (${v.impact}) — ${v.nodes.length} шт.; ${v.nodes[0].failureSummary?.split('\n')[1] ?? ''}`);
