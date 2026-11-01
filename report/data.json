@@ -1,0 +1,10 @@
+{
+  "tokensOut": "$ npm run tokens\n\n> edukit@1.1.0 tokens\n> node style-dictionary.config.mjs\n\n\ncss\n✔︎ src/styles/tokens.css\n\ncss",
+  "gitOut": "$ git log --oneline\nff0efa1 audit.mjs: ожидание собственного запуска axe аддона a11y\n4a4d5a6 CI: пропуск Chromatic без токена, Node 22\n54aa50d Fix story counts in report\ne44c34c Add report, screenshots and README\n2081483 EduKit 1.1.0: tokens, 21 components, dark theme, Storybook, CI\n$ git tag -n\nv1.1.0          Dark theme, Switch/Tooltip/Modal/Table, Chromatic CI\n$ git show v1.1.0 --no-patch --format=\"%H%n%an, %ad\"\ntag v1.1.0\nTagger: ArsenFatkhullin21 <179637714+ArsenFatkhullin21@users.noreply.github.com>\n\nDark theme, Switch/Tooltip/Modal/Table, Chromatic CI\n20814833f00b9afa54cba379834de655a7ec07e3\nArsenFatkhullin21, Sun Nov 1 16:07:31 2026 +0500",
+  "auditOut": "stories: 86 × 2 темы; ошибок рендера: 0; нарушений axe: 0",
+  "vr": {
+    "baseline": "эталон: 172 снимков",
+    "changed": "изменено: 75 из 172",
+    "reverted": "изменено: 0 из 172"
+  }
+}
