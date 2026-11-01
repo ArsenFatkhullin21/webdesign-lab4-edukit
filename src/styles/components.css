@@ -1,0 +1,20 @@
+/* Единая точка подключения стилей всех компонентов (используется в preview.js и при публикации пакета) */
+@import '../components/atoms/Icon/Icon.css';
+@import '../components/atoms/Button/Button.css';
+@import '../components/atoms/Input/Input.css';
+@import '../components/atoms/Checkbox/Checkbox.css';
+@import '../components/atoms/Badge/Badge.css';
+@import '../components/atoms/Avatar/Avatar.css';
+@import '../components/atoms/Spinner/Spinner.css';
+@import '../components/molecules/FormField/FormField.css';
+@import '../components/molecules/SearchBar/SearchBar.css';
+@import '../components/molecules/Pagination/Pagination.css';
+@import '../components/molecules/Breadcrumbs/Breadcrumbs.css';
+@import '../components/molecules/Tabs/Tabs.css';
+@import '../components/molecules/Tooltip/Tooltip.css';
+@import '../components/organisms/Header/Header.css';
+@import '../components/organisms/Footer/Footer.css';
+@import '../components/organisms/Card/Card.css';
+@import '../components/organisms/Modal/Modal.css';
+@import '../components/organisms/Table/Table.css';
+@import '../components/organisms/Form/Form.css';

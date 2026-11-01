@@ -1,0 +1,19 @@
+/* Глобальные стили: сброс + базовая типографика. Только через токены. */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: var(--font-line-height-base);
+  color: var(--color-semantic-text-default);
+  background: var(--color-semantic-background-default);
+}
+h1, h2, h3, h4 { font-family: var(--font-family-display); line-height: var(--font-line-height-tight); margin: 0 0 var(--space-3); }
+p { margin: 0 0 var(--space-4); }
+img, svg { max-width: 100%; display: block; }
+button, input, select, textarea { font: inherit; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* Метрик-совместимые fallback-шрифты: меньше сдвигов (CLS) при загрузке веб-шрифтов */
+@font-face { font-family: 'Inter Fallback'; src: local('Arial'); size-adjust: 107.4%; ascent-override: 90.2%; descent-override: 22.5%; line-gap-override: 0%; }
+@font-face { font-family: 'Manrope Fallback'; src: local('Arial'); size-adjust: 104%; ascent-override: 100%; descent-override: 25%; line-gap-override: 0%; }

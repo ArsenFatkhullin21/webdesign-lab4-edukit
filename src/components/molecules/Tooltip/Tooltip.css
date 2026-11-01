@@ -1,0 +1,11 @@
+.ds-tooltip { position: relative; display: inline-block; }
+.ds-tooltip__bubble {
+  position: absolute; left: 50%; z-index: 10; width: max-content; max-width: 260px; padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm); line-height: 1.4; border-radius: var(--radius-md); box-shadow: var(--shadow-md);
+  background: var(--color-semantic-text-default); color: var(--color-semantic-text-inverse);
+  opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%, 4px);
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-standard), transform var(--motion-duration-fast) var(--motion-easing-standard), visibility var(--motion-duration-fast);
+}
+.ds-tooltip--top .ds-tooltip__bubble { bottom: calc(100% + var(--space-2)); }
+.ds-tooltip--bottom .ds-tooltip__bubble { top: calc(100% + var(--space-2)); transform: translate(-50%, -4px); }
+.ds-tooltip:is(:hover, :focus-within, .is-open):not(.is-dismissed) .ds-tooltip__bubble { opacity: 1; visibility: visible; transform: translate(-50%, 0); }

@@ -1,0 +1,8 @@
+.ds-avatar {
+  display: inline-flex; align-items: center; justify-content: center; flex: none; object-fit: cover;
+  border-radius: 50%; background: var(--color-semantic-action-primary-soft); color: var(--color-semantic-text-default);
+  font-family: var(--font-family-display); font-weight: var(--font-weight-extrabold);
+}
+.ds-avatar--sm { width: 32px; height: 32px; font-size: var(--font-size-xs); }
+.ds-avatar--md { width: 48px; height: 48px; font-size: var(--font-size-sm); }
+.ds-avatar--lg { width: 72px; height: 72px; font-size: var(--font-size-lg); }

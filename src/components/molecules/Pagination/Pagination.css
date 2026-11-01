@@ -1,0 +1,11 @@
+.ds-pagination__list { display: flex; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.ds-page {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 var(--space-3);
+  font-weight: var(--font-weight-semibold); color: var(--color-semantic-text-default); cursor: pointer;
+  background: var(--color-semantic-background-surface); border: 1px solid var(--color-semantic-border-default); border-radius: var(--radius-md);
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.ds-page:hover:not(:disabled):not(.is-active) { background: var(--color-semantic-background-subtle); }
+.ds-page:focus-visible { outline: 3px solid var(--color-semantic-focus-ring); outline-offset: 2px; }
+.ds-page.is-active { background: var(--color-semantic-action-primary); border-color: var(--color-semantic-action-primary); color: var(--color-semantic-action-on-primary); }
+.ds-page:disabled { opacity: .45; cursor: not-allowed; }

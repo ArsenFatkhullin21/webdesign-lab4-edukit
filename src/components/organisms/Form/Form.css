@@ -1,0 +1,7 @@
+.ds-form { display: grid; gap: var(--space-5); width: min(440px, 100%); padding: var(--space-8); background: var(--color-semantic-background-surface); border: 1px solid var(--color-semantic-border-default); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.ds-form__title { margin: 0; font-size: var(--font-size-xl); }
+.ds-form__group { display: grid; gap: var(--space-3); margin: 0; padding: 0; border: 0; }
+.ds-form__group legend { padding: 0; margin-bottom: var(--space-2); font-weight: var(--font-weight-semibold); font-size: var(--font-size-sm); }
+.ds-form__status { margin: 0; min-height: 1.5em; font-size: var(--font-size-sm); color: var(--color-semantic-text-muted); }
+.ds-form .ds-field { min-width: 0; }
+.ds-form .ds-input { min-width: 0; }

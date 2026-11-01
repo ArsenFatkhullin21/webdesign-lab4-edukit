@@ -1,0 +1,13 @@
+.ds-input {
+  width: 100%; min-width: 240px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-family-body); font-size: var(--font-size-base);
+  color: var(--color-semantic-text-default); background: var(--color-semantic-background-surface);
+  border: 1px solid var(--color-semantic-border-strong); border-radius: var(--radius-md);
+  transition: border-color var(--motion-duration-fast) var(--motion-easing-standard), box-shadow var(--motion-duration-fast) var(--motion-easing-standard);
+}
+.ds-input::placeholder { color: var(--color-semantic-text-muted); }
+.ds-input:hover:not(:disabled) { border-color: var(--color-semantic-action-link); }
+.ds-input:focus-visible { outline: 3px solid var(--color-semantic-focus-ring); outline-offset: 1px; border-color: var(--color-semantic-focus-ring); }
+.ds-input:disabled { opacity: .55; cursor: not-allowed; background: var(--color-semantic-background-subtle); }
+.ds-input[aria-invalid="true"] { border-color: var(--color-semantic-feedback-error-text); border-width: 2px; }

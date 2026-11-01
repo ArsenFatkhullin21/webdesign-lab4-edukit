@@ -1,0 +1,6 @@
+.ds-crumbs__list { display: flex; flex-wrap: wrap; gap: var(--space-2); list-style: none; margin: 0; padding: 0; font-size: var(--font-size-sm); color: var(--color-semantic-text-muted); }
+.ds-crumbs__item + .ds-crumbs__item::before { content: '/'; margin-right: var(--space-2); color: var(--color-semantic-border-strong); }
+.ds-crumbs__item[aria-current] { color: var(--color-semantic-text-default); font-weight: var(--font-weight-medium); }
+.ds-crumbs__link { color: var(--color-semantic-action-link); text-decoration: none; }
+.ds-crumbs__link:hover { color: var(--color-semantic-action-link-hover); text-decoration: underline; }
+.ds-crumbs__link:focus-visible { outline: 3px solid var(--color-semantic-focus-ring); outline-offset: 2px; border-radius: var(--radius-sm); }

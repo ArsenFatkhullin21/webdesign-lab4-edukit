@@ -1,0 +1,13 @@
+.ds-spinner {
+  display: inline-block; border-radius: 50%;
+  border: 3px solid var(--color-semantic-border-default); border-top-color: var(--color-semantic-action-link);
+  animation: ds-spin 0.8s linear infinite;
+}
+.ds-spinner--sm { width: 16px; height: 16px; border-width: 2px; }
+.ds-spinner--md { width: 28px; height: 28px; }
+.ds-spinner--lg { width: 48px; height: 48px; border-width: 4px; }
+.ds-spinner__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@keyframes ds-spin { to { transform: rotate(360deg); } }
+/* При reduced-motion вращение заменяется статичным кольцом с пульсацией непрозрачности */
+@media (prefers-reduced-motion: reduce) { .ds-spinner { animation: ds-pulse 1.6s ease-in-out infinite !important; } }
+@keyframes ds-pulse { 50% { opacity: .35; } }

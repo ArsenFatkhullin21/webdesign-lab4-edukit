@@ -1,0 +1,12 @@
+.ds-modal { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: var(--space-4); background: var(--color-semantic-background-overlay); }
+.ds-modal[hidden] { display: none; }
+.ds-modal--inline { position: relative; inset: auto; z-index: 0; min-width: 560px; padding: var(--space-8); border-radius: var(--radius-lg); }
+.ds-modal__dialog { position: relative; width: min(480px, 100%); padding: var(--space-8); background: var(--color-semantic-background-surface); color: var(--color-semantic-text-default); border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); animation: ds-modal-in var(--motion-duration-base) var(--motion-easing-standard); }
+.ds-modal__title { margin: 0 var(--space-8) var(--space-3) 0; font-size: var(--font-size-xl); }
+.ds-modal__body { color: var(--color-semantic-text-muted); margin-bottom: var(--space-6); }
+.ds-modal__footer { display: flex; justify-content: flex-end; gap: var(--space-3); }
+.ds-modal__close { position: absolute; top: var(--space-4); right: var(--space-4); display: inline-flex; padding: var(--space-2); cursor: pointer; color: var(--color-semantic-text-muted); background: none; border: 0; border-radius: var(--radius-md); }
+.ds-modal__close:hover { background: var(--color-semantic-background-subtle); color: var(--color-semantic-text-default); }
+.ds-modal__close:focus-visible { outline: 3px solid var(--color-semantic-focus-ring); outline-offset: 2px; }
+@keyframes ds-modal-in { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+.ds-modal--inline .ds-modal__dialog { animation: none; }

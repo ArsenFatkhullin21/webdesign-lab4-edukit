@@ -1,0 +1,32 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root[data-theme="dark"] {
+  --color-semantic-background-overlay: rgba(0, 0, 0, 0.7);
+  --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, .4);
+  --shadow-md: 0px 4px 12px 0px rgba(0, 0, 0, .5);
+  --shadow-lg: 0px 12px 24px 0px rgba(0, 0, 0, .6);
+  --color-semantic-background-default: var(--color-primitive-gray-900);
+  --color-semantic-background-surface: var(--color-primitive-gray-800);
+  --color-semantic-background-subtle: var(--color-primitive-gray-800);
+  --color-semantic-text-default: var(--color-primitive-gray-50);
+  --color-semantic-text-muted: var(--color-primitive-gray-300);
+  --color-semantic-text-inverse: var(--color-primitive-gray-900);
+  --color-semantic-border-default: var(--color-primitive-gray-700);
+  --color-semantic-border-strong: var(--color-primitive-gray-400);
+  --color-semantic-action-link: var(--color-primitive-blue-400);
+  --color-semantic-action-link-hover: var(--color-primitive-blue-200);
+  --color-semantic-action-primary-soft: var(--color-primitive-blue-900);
+  --color-semantic-action-danger: var(--color-primitive-red-700);
+  --color-semantic-action-danger-hover: var(--color-primitive-red-600);
+  --color-semantic-feedback-info-bg: var(--color-primitive-blue-900);
+  --color-semantic-feedback-info-text: var(--color-primitive-blue-200);
+  --color-semantic-feedback-success-bg: var(--color-primitive-green-900);
+  --color-semantic-feedback-success-text: var(--color-primitive-green-200);
+  --color-semantic-feedback-warning-bg: var(--color-primitive-amber-900);
+  --color-semantic-feedback-warning-text: var(--color-primitive-amber-200);
+  --color-semantic-feedback-error-bg: var(--color-primitive-red-900);
+  --color-semantic-feedback-error-text: var(--color-primitive-red-200);
+  --color-semantic-focus-ring: var(--color-primitive-blue-400);
+}
