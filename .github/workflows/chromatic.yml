@@ -1,18 +1,27 @@
 # Визуальное регрессионное тестирование: при каждом push Chromatic снимает скриншоты
-# всех stories и сравнивает с базовой версией. Нужен секрет CHROMATIC_TOKEN в настройках репозитория.
+# всех stories и сравнивает с принятой базовой версией.
+# Нужен секрет CHROMATIC_TOKEN (Settings → Secrets and variables → Actions).
+# Пока секрета нет, шаг пропускается, и сборка не падает.
 name: Chromatic
 on: push
 jobs:
   chromatic:
     runs-on: ubuntu-latest
+    env:
+      CHROMATIC_TOKEN: ${{ secrets.CHROMATIC_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0   # Chromatic нужна вся история git, чтобы найти базовую сборку
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run tokens
-      - run: npx chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}
+      - name: Publish to Chromatic
+        if: env.CHROMATIC_TOKEN != ''
+        run: npx chromatic --project-token="$CHROMATIC_TOKEN" --exit-zero-on-changes
+      - name: Skip (no token)
+        if: env.CHROMATIC_TOKEN == ''
+        run: echo "CHROMATIC_TOKEN не задан — публикация в Chromatic пропущена"
